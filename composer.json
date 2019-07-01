@@ -1,0 +1,18 @@
+{
+    "require": {
+        "mindplay/testies": "^1",
+        "psr/http-client": "^1.0",
+        "nyholm/psr7": "^1.1",
+        "ext-json": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Kodus\\Http\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/php-code-coverage": "^7.0"
+    }
+}

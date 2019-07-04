@@ -12,13 +12,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">7",
+        "php": ">7.1",
         "psr/http-client": "^1.0",
         "ext-json": "*"
     },
     "require-dev": {
         "mindplay/testies": "^1",
-        "phpunit/php-code-coverage": ">=5, <8",
+        "phpunit/php-code-coverage": ">=6, <8",
         "nyholm/psr7": "^1.1"
     },
     "autoload": {

@@ -9,7 +9,7 @@ before_script:
   - composer update --prefer-dist --no-interaction
 
 script:
-  - if [ $(phpenv version-name) = "7.3" ]; then php test/test.php; else vendor/bin/phpunit; fi
+  - php test/test.php
 
 after_script:
   - if [ $(phpenv version-name) = "7.3" ]; then wget https://scrutinizer-ci.com/ocular.phar; fi

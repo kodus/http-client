@@ -191,6 +191,23 @@ test(
     }
 );
 
+test(
+    "do not follow redirects",
+    function () use ($http, $client) {
+        $expected_url = "https://httpbin.org/";
+
+        $query = http_build_query(["url" => $expected_url]);
+
+        $response = $client->sendRequest(
+            $http->createRequest("GET", "https://httpbin.org/redirect-to?{$query}")
+        );
+
+        eq($response->getStatusCode(), 302);
+
+        eq($response->getHeaderLine("Location"), $expected_url, "can get Location header");
+    }
+);
+
 configure()->enableCodeCoverage(__DIR__ . "/clover.xml", [dirname(__DIR__) . "/src"]);
 
 exit(run());

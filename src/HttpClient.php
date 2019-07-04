@@ -64,11 +64,12 @@ class HttpClient implements ClientInterface
         $context = stream_context_create([
             "http" => [
                 // http://docs.php.net/manual/en/context.http.php
-                "method"        => $method,
-                "header"        => implode("\r\n", $headers),
-                "content"       => $request->getBody()->__toString(),
-                "ignore_errors" => true,
-                "proxy"         => $this->proxy,
+                "method"          => $method,
+                "header"          => implode("\r\n", $headers),
+                "content"         => $request->getBody()->__toString(),
+                "ignore_errors"   => true,
+                "follow_location" => 0, // do not follow redirects
+                "proxy"           => $this->proxy,
             ],
         ]);
 

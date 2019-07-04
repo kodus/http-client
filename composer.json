@@ -1,18 +1,29 @@
 {
-    "require": {
-        "mindplay/testies": "^1",
-        "psr/http-client": "^1.0",
-        "nyholm/psr7": "^1.1",
-        "ext-json": "*"
-    },
+    "name": "kodus/http-client",
+    "type": "library",
+    "description": "Minimalist PSR-18 HTTP Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rasmus Schultz",
+            "email": "rasmus@mindplay.dk"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "require": {
+        "php": ">7",
+        "psr/http-client": "^1.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "mindplay/testies": "^1",
+        "phpunit/php-code-coverage": "^7.0",
+        "nyholm/psr7": "^1.1"
+    },
     "autoload": {
         "psr-4": {
             "Kodus\\Http\\": "src/"
         }
-    },
-    "require-dev": {
-        "phpunit/php-code-coverage": "^7.0"
     }
 }

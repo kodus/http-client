@@ -8,7 +8,7 @@ php:
   - 7.4
 
 before_script:
-  - composer install --prefer-dist --no-interaction
+  - composer update --prefer-dist --no-interaction
 
 script:
   - if [ $(phpenv version-name) = "7.3" ]; then php test/test.php; else vendor/bin/phpunit; fi

@@ -18,7 +18,7 @@
     },
     "require-dev": {
         "mindplay/testies": "^1",
-        "phpunit/php-code-coverage": "^7.0",
+        "phpunit/php-code-coverage": ">=5, <8",
         "nyholm/psr7": "^1.1"
     },
     "autoload": {
